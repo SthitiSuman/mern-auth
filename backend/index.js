@@ -23,8 +23,6 @@ app.use(cookieParser());
 
 mongoose
   .connect(process.env.MONGO, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000,
   })
   .then(() => {
