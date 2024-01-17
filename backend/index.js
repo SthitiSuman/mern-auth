@@ -22,9 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 mongoose
-  .connect(process.env.MONGO, {
-    serverSelectionTimeoutMS: 30000,
-  })
+  .connect(process.env.MONGO)
   .then(() => {
     console.log("connected to MongoDB");
   })
