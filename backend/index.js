@@ -9,6 +9,7 @@ import path from "path";
 dotenv.config();
 
 const app = express();
+const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
 
@@ -28,7 +29,6 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-const __dirname = path.resolve();
 
 app.listen(3000, () => {
   console.log("server listening on port 3000");
